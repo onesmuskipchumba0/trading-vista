@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaStore } from 'react-icons/fa';
+import { FaStore, FaUser } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa6';
 
 function Navbar() {
@@ -19,7 +19,7 @@ function Navbar() {
         {name: "Settings", href: "/settings"},
     ]
   return (
-    <nav className='flex flex-row gap-4 itemms-center justify-center w-full p-4 bg-gradient-to-r from-teal-500 to-green-400 shadow-md rounded-lg'>
+    <nav className='flex flex-row gap-4 itemms-center justify-center w-full p-4 bg-gradient-to-br from-teal-500 via-blue-500 to-purple-500 shadow-md rounded-lg'>
         <a href="/" className="flex items-center gap-2 text-gray-100 hover:text-blue-500 transition-colors duration-200 mr-auto">
             <FaStore className='text-3xl text-gray-100'/>
             <span className="text-lg font-bold text-transparent bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text">Trading Vista</span>
@@ -33,9 +33,15 @@ function Navbar() {
           {element.name}
         </a>
       ))}
-      <a href="https://github.com/onesmuskipchumba0" className='flex items-center justify-center'>
-      <FaGithub className='text-3xl text-gray-100 hover:text-slate-800 transition-colors duration-200' />
-      </a>
+      <div className='flex flex-row items-center justify-center gap-4 ml-auto'>
+        <a href="https://github.com/onesmuskipchumba0" className='flex items-center justify-center'>
+        <FaGithub className='text-3xl text-gray-100 hover:text-slate-800 transition-colors duration-200' />
+        </a>
+        <a href="/login" className='flex items-center justify-center'>
+        <FaUser className='text-3xl text-gray-100 hover:text-slate-800 transition-colors duration-200' />
+        </a>
+
+      </div>
     </nav>
   )
 }
